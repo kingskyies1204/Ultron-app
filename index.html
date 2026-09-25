@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <title>ULTRON</title>
-    <script type="module" crossorigin src="./assets/index-FzhuMzev.js"></script>
+    <script type="module" crossorigin src="./assets/index-LPObuT9w.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DV2o1yvr.css">
   </head>
   <body>
@@ -63,9 +63,16 @@
         <h2>Settings</h2>
 
         <label class="field">
-          <span>Anthropic API key</span>
+          <span>Gemini API key (free)</span>
+          <input id="s-gemini" type="password" autocomplete="off" placeholder="AIza…" />
+          <small>Free from <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+            Stored only on this phone, sent only to Google. Free-tier chats may be used by Google to improve its models.</small>
+        </label>
+
+        <label class="field">
+          <span>Anthropic API key (paid, optional)</span>
           <input id="s-key" type="password" autocomplete="off" placeholder="sk-ant-…" />
-          <small>Stored only on this phone. Sent only to api.anthropic.com. Get one at
+          <small>Only needed for the Claude brains. Stored only on this phone, sent only to api.anthropic.com. Get one at
             <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>.</small>
         </label>
 
@@ -104,7 +111,7 @@
           <input id="s-damage" type="range" min="0" max="1" step="0.01" />
         </label>
 
-        <label class="check"><input id="s-search" type="checkbox" /> Web search (≈$0.01 per search)</label>
+        <label class="check"><input id="s-search" type="checkbox" /> Web search (Claude only, ≈$0.01 per search)</label>
 
         <div class="row">
           <button type="button" id="s-clear-chat" class="btn">Clear chat</button>
@@ -125,11 +132,11 @@
         <h2>Wake Ultron</h2>
         <ol class="steps">
           <li>In Safari, tap <b>Share → Add to Home Screen</b> so Ultron runs full screen like an app.</li>
-          <li>Get an API key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a> (add a few dollars of credit).</li>
+          <li>Get a <b>free</b> Gemini key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> (sign in with Google → Create API key).</li>
           <li>Paste it below. It stays on this phone.</li>
           <li>Optional: add an <a href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener">ElevenLabs</a> key for the real Ultron voice.</li>
         </ol>
-        <input id="w-key" type="password" autocomplete="off" placeholder="Anthropic key: sk-ant-…" />
+        <input id="w-key" type="password" autocomplete="off" placeholder="Free Gemini key: AIza…" />
         <input id="w-eleven" type="password" autocomplete="off" placeholder="ElevenLabs key (optional): sk_…" />
         <button class="btn primary" value="save">Start</button>
       </form>
