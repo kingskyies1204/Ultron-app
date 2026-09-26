@@ -1,0 +1,41 @@
+{
+  "name": "Ultron",
+  "identifier": "io.github.kingskyies1204.ultron.source",
+  "subtitle": "Your personal Ultron",
+  "iconURL": "https://kingskyies1204.github.io/Ultron-app/app/icon.png",
+  "website": "https://kingskyies1204.github.io/Ultron-app/",
+  "tintColor": "#ffb21e",
+  "apps": [
+    {
+      "name": "Ultron",
+      "bundleIdentifier": "io.github.kingskyies1204.ultron",
+      "developerName": "kingskyies1204",
+      "subtitle": "AI assistant with a living eye",
+      "localizedDescription": "Ultron: talk, call, search the web, Gmail, Calendar, Spotify.",
+      "iconURL": "https://kingskyies1204.github.io/Ultron-app/app/icon.png",
+      "tintColor": "#ffb21e",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-09-26",
+          "localizedDescription": "First real app build.",
+          "downloadURL": "https://kingskyies1204.github.io/Ultron-app/app/Ultron.ipa",
+          "size": 3995555,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSMicrophoneUsageDescription": "Ultron listens when you talk to him or call him.",
+          "NSSpeechRecognitionUsageDescription": "Ultron turns what you say into text so he can answer.",
+          "NSCameraUsageDescription": "Hand control: Ultron's eye follows your hand.",
+          "NSLocationWhenInUseUsageDescription": "So Ultron can tell you what's around you when you ask."
+        }
+      }
+    }
+  ],
+  "news": []
+}
