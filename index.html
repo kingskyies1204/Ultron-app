@@ -12,12 +12,14 @@
     <link rel="icon" type="image/png" href="icons/icon-192.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://api.elevenlabs.io" crossorigin />
+    <link rel="preconnect" href="https://api.groq.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <title>ULTRON</title>
-    <script type="module" crossorigin src="./assets/index-C-yWdGv1.js"></script>
+    <script type="module" crossorigin src="./assets/index-4VSObh04.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DV2o1yvr.css">
   </head>
   <body>
@@ -106,6 +108,14 @@
           <span>…or paste a Voice ID</span>
           <input id="s-eleven-id" autocomplete="off" placeholder="e.g. from elevenlabs.io → Voice Library → ⋯ → Copy voice ID" />
           <small>Any voice from the ElevenLabs Voice Library. Overrides the list above.</small>
+        </label>
+
+        <label class="field">
+          <span>Voice engine</span>
+          <select id="s-engine">
+            <option value="human">Most human (v3): starts a bit slower</option>
+            <option value="fast">Fast (Flash): talks almost instantly, a bit less human</option>
+          </select>
         </label>
 
         <label class="field">
