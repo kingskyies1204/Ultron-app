@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <title>ULTRON</title>
-    <script type="module" crossorigin src="./assets/index-DnqWhH_D.js"></script>
+    <script type="module" crossorigin src="./assets/index-kn469Bs-.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DV2o1yvr.css">
   </head>
   <body>
@@ -103,11 +103,17 @@
         </label>
 
         <label class="field">
+          <span>…or paste a Voice ID</span>
+          <input id="s-eleven-id" autocomplete="off" placeholder="e.g. from elevenlabs.io → Voice Library → ⋯ → Copy voice ID" />
+          <small>Any voice from the ElevenLabs Voice Library. Overrides the list above.</small>
+        </label>
+
+        <label class="field">
           <span>Voice style</span>
           <select id="s-style">
-            <option value="cinematic">Cinematic: deep, smooth, movie Ultron</option>
+            <option value="natural">Natural: real human voice, no effects</option>
+            <option value="cinematic">Cinematic: warmer, movie feel</option>
             <option value="robot">Robot: heavy metallic FX</option>
-            <option value="raw">Raw: no effects</option>
           </select>
           <small>Effects apply to the ElevenLabs voice. Damage above ~35% adds glitch bursts.</small>
         </label>
