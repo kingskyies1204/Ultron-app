@@ -50,7 +50,8 @@ class UltronVoiceProcessor extends AudioWorkletProcessor {
     const input = inputs[0] && inputs[0][0];
     const out = outputs[0];
     const n = out[0].length;
-    const damage = params.damage[0];
+    // Glitches (stutter, dropouts, crush, wobble) only kick in above 30% damage.
+    const damage = Math.max(0, (params.damage[0] - 0.3) / 0.7);
     const ringFreq = params.ringFreq[0];
     const ringMix = params.ringMix[0];
     const basePitch = params.pitch[0];
