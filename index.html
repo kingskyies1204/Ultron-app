@@ -19,8 +19,8 @@
       rel="stylesheet"
     />
     <title>ULTRON</title>
-    <script type="module" crossorigin src="./assets/index-C3J1B5C2.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BcW-xytG.css">
+    <script type="module" crossorigin src="./assets/index-VS4pxWPP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CepTfdYe.css">
   </head>
   <body>
     <canvas id="orb"></canvas>
@@ -155,6 +155,40 @@
           <span>Damage <b id="s-damage-val"></b></span>
           <input id="s-damage" type="range" min="0" max="1" step="0.01" />
         </label>
+
+        <h3 class="sec">Connected accounts</h3>
+        <label class="field">
+          <span>Google Client ID (Gmail + Calendar) <b id="s-google-status"></b></span>
+          <input id="s-google-id" autocomplete="off" placeholder="…apps.googleusercontent.com" />
+        </label>
+        <button type="button" id="s-google-connect" class="btn">Connect Google</button>
+        <details>
+          <summary>How to get a Google Client ID (free, ~10 min)</summary>
+          <ol class="steps">
+            <li>On a computer, open <b>console.cloud.google.com</b> and sign in with your Gmail.</li>
+            <li>Top bar → project picker → <b>New project</b> → name it "Ultron" → Create (then select it).</li>
+            <li>Search "<b>Gmail API</b>" → Enable. Search "<b>Google Calendar API</b>" → Enable.</li>
+            <li>Menu → <b>Google Auth Platform</b> (or APIs &amp; Services → OAuth consent screen) → Get started: app name "Ultron", your email, audience <b>External</b> → Create.</li>
+            <li><b>Audience</b> → Test users → <b>Add users</b> → add your own Gmail address.</li>
+            <li><b>Clients</b> → Create client → type <b>Web application</b>.<br />Authorized JavaScript origins: <code class="copy" id="s-origin"></code><br />Authorized redirect URIs: <code class="copy" id="s-redirect"></code></li>
+            <li>Create → copy the <b>Client ID</b> → paste it above → Connect Google. Google warns the app is "unverified" (it's yours) → Continue → tick all boxes.</li>
+          </ol>
+          <small>Google logins last about an hour; after that Ultron shows a one-tap reconnect button.</small>
+        </details>
+
+        <label class="field">
+          <span>Spotify Client ID <b id="s-spotify-status"></b></span>
+          <input id="s-spotify-id" autocomplete="off" placeholder="32 letters/numbers" />
+        </label>
+        <button type="button" id="s-spotify-connect" class="btn">Connect Spotify</button>
+        <details>
+          <summary>How to get a Spotify Client ID (free, ~3 min)</summary>
+          <ol class="steps">
+            <li>Open <b>developer.spotify.com/dashboard</b> and log in with your Spotify.</li>
+            <li><b>Create app</b>: name "Ultron", any description, Redirect URI: <code class="copy" id="s-redirect2"></code> → tick <b>Web API</b> → Save.</li>
+            <li>Open the app → Settings → copy the <b>Client ID</b> → paste it above → Connect Spotify.</li>
+          </ol>
+        </details>
 
         <label class="check"><input id="s-search" type="checkbox" /> Internet access (free on Groq/Gemini; ≈$0.01 per search on Claude)</label>
 
